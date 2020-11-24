@@ -27,10 +27,7 @@ application.register("scroll-to", ScrollTo)
 ## Usage
 
 ```html
-<a
-  href="#awesome-stuff-here"
-  data-controller="scroll-to"
->Scroll to #awesome-stuff-here</a>
+<a href="#awesome-stuff-here" data-controller="scroll-to">Scroll to #awesome-stuff-here</a>
 
 <h2 id="awesome-stuff-here">Awesome stuff here</h2>
 ```
