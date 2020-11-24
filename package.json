@@ -1,5 +1,5 @@
 {
-  "name": "stimulus-rails-autosave",
+  "name": "stimulus-scroll-to",
   "version": "0.1.0",
   "description": "A Stimulus controller to scroll to elements.",
   "keywords": [
@@ -11,13 +11,13 @@
     "autosave",
     "form"
   ],
-  "repository": "git@github.com:stimulus-components/stimulus-rails-autosave.git",
+  "repository": "git@github.com:stimulus-components/stimulus-scroll-to.git",
   "bugs": {
-    "url": "https://github.com/stimulus-components/stimulus-rails-autosave/issues"
+    "url": "https://github.com/stimulus-components/stimulus-scroll-to/issues"
   },
   "author": "Guillaume Briday <guillaumebriday@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/stimulus-components/stimulus-rails-autosave",
+  "homepage": "https://github.com/stimulus-components/stimulus-scroll-to",
   "private": false,
   "esnext": "dist-src/index.js",
   "main": "dist-node/index.js",
