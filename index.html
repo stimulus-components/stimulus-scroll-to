@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Stimulus ScrollTo</title>
+    <script type="module" src="./src/index.js" defer></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js" defer></script>
+
+    <script type="module" defer>
+      import ScrollTo from './src/index.js'
+
+      const application = Stimulus.Application.start()
+      application.register('scroll-to', ScrollTo)
+    </script>
+
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      a {
+        color: #667eea;
+        display: inline-block;
+      }
+
+      .badges a {
+        margin: 0 0.25rem;
+      }
+
+      pre code {
+        border-radius: 0.5rem;
+        text-align: left;
+        font-family: Menlo, 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full max-w-6xl mx-auto my-24 p-4">
+      <h1 class="text-center mb-8 text-5xl font-bold">Stimulus ScrollTo</h1>
+
+      <p class="text-center mb-4">
+        A Stimulus controller to scroll to elements.
+      </p>
+
+      <p class="text-center badges">
+        <a href="https://www.npmjs.com/package/stimulus-scroll-to">
+          <img src="https://img.shields.io/npm/dt/stimulus-scroll-to.svg" />
+        </a>
+
+        <a href="https://www.npmjs.com/package/stimulus-scroll-to">
+          <img src="https://img.shields.io/npm/v/stimulus-scroll-to.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-scroll-to">
+          <img src="https://github.com/stimulus-components/stimulus-scroll-to/workflows/Lint/badge.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-scroll-to">
+          <img src="https://img.shields.io/github/license/stimulus-components/stimulus-scroll-to.svg" />
+        </a>
+
+        <a href="https://stimulus-scroll-to.netlify.com/">
+          <img src="https://api.netlify.com/api/v1/badges/a8341029-7f19-443d-88aa-02c6325b389e/deploy-status" />
+        </a>
+      </p>
+
+      <h2 class="text-center text-2xl font-bold my-4">Essential links</h2>
+
+      <ul class="text-center mb-8">
+        <li>
+          <a href="https://github.com/stimulus-components/stimulus-scroll-to" target="_blank" rel="noopener">
+            Github
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.npmjs.com/package/stimulus-scroll-to" target="_blank" rel="noopener">
+            Npm
+          </a>
+        </li>
+      </ul>
+
+      <section class="mt-16">
+        <a href="#awesome-stuff-here" data-controller="scroll-to" data-scroll-to-offset="50"
+          >Scroll to #awesome-stuff-here</a
+        >
+
+        <div style="height: 100vh"></div>
+
+        <h2 id="awesome-stuff-here" class="text-2xl">Awesome stuff here</h2>
+        <p>Keep scrolling 👇</p>
+
+        <div style="height: 100vh"></div>
+
+        <a href="#awesome-stuff-here" data-controller="scroll-to" data-scroll-to-offset="50"
+          >Scroll to #awesome-stuff-here</a
+        >
+      </section>
+    </div>
+  </body>
+</html>
