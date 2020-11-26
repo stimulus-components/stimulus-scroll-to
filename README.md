@@ -79,6 +79,16 @@ This controller will automatically have access to targets defined in the parent 
 
 If you override the `connect`, `disconnect` or any other methods from the parent, you'll want to call `super.method()` to make sure the parent functionality is executed.
 
+## Compatibility
+
+The [Window.scrollTo()](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo) method is used under the hood.
+
+It's basically compatible with every modern browsers. For now, Safari does not provide `smooth` behavior scroll support.
+
+See [https://caniuse.com/mdn-api_scrolltooptions_behavior](https://caniuse.com/mdn-api_scrolltooptions_behavior).
+
+You can easily add it with this polyfill: [smoothscroll-polyfill](https://github.com/iamdustan/smoothscroll).
+
 ## Development
 
 ### Linter

@@ -9,8 +9,10 @@
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js" defer></script>
 
     <script type="module" defer>
+      import SmoothScroll from 'smoothscroll-polyfill'
       import ScrollTo from './src/index.js'
 
+      SmoothScroll.polyfill()
       const application = Stimulus.Application.start()
       application.register('scroll-to', ScrollTo)
     </script>
