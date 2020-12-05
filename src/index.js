@@ -28,7 +28,7 @@ export default class extends Controller {
     const target = document.getElementById(id)
 
     if (!target) {
-      console.warn(`The element with the id: "${id}" does not exist on the page.`)
+      console.warn(`[stimulus-scroll-to] The element with the id: "${id}" does not exist on the page.`)
       return
     }
 
