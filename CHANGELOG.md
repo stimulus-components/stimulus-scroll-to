@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2020-12-05
+
+### Changed
+
+- Fixing Stimulus version in peerDependencies.
+
 ## [2.0.0] - 2020-12-05
 
 ### Added
