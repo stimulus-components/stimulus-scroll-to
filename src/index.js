@@ -1,6 +1,11 @@
 import { Controller } from 'stimulus'
 
 export default class extends Controller {
+  static values = {
+    offset: Number,
+    behavior: String
+  }
+
   initialize () {
     this.scroll = this.scroll.bind(this)
   }
@@ -8,8 +13,8 @@ export default class extends Controller {
   connect () {
     this.element.addEventListener('click', this.scroll)
 
-    this.offset = this.data.get('offset') || this.defaultOptions.offset || 10
-    this.behavior = this.data.get('behavior') || this.defaultOptions.behavior || 'smooth'
+    this.offset = this.offsetValue || this.defaultOptions.offset || 10
+    this.behavior = this.behaviorValue || this.defaultOptions.behavior || 'smooth'
   }
 
   disconnect () {
