@@ -6,13 +6,11 @@ interface Option {
 }
 
 export default class extends Controller {
-  offset: number
-  behavior: string
-
   // @ts-ignore
   element: HTMLAnchorElement
   offsetValue: number
   behaviorValue: string
+  hasOffsetValue: boolean
 
   static values = {
     offset: Number,
@@ -51,7 +49,7 @@ export default class extends Controller {
     })
   }
 
-  get offset () {
+  get offset (): number {
     if (this.hasOffsetValue) {
       return this.offsetValue
     }
@@ -63,7 +61,7 @@ export default class extends Controller {
     return 10
   }
 
-  get behavior () {
+  get behavior (): string {
     return this.behaviorValue || this.defaultOptions.behavior || 'smooth'
   }
 
