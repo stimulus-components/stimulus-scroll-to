@@ -25,9 +25,6 @@ export default class extends Controller {
 
   connect (): void {
     this.element.addEventListener('click', this.scroll)
-
-    this.offset = this.offsetValue || this.defaultOptions.offset || 10
-    this.behavior = this.behaviorValue || this.defaultOptions.behavior || 'smooth'
   }
 
   disconnect (): void {
@@ -52,6 +49,22 @@ export default class extends Controller {
       top: offsetPosition,
       behavior: this.behavior
     })
+  }
+
+  get offset () {
+    if (this.hasOffsetValue) {
+      return this.offsetValue
+    }
+
+    if (this.defaultOptions.offset !== undefined) {
+      return this.defaultOptions.offset
+    }
+
+    return 10
+  }
+
+  get behavior () {
+    return this.behaviorValue || this.defaultOptions.behavior || 'smooth'
   }
 
   get defaultOptions (): Option {
