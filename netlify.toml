@@ -2,3 +2,9 @@
 [build]
   publish="dist"
   command="yarn prod"
+
+[[redirects]]
+  from = "https://stimulus-scroll-to.netlify.app/*"
+  to = "https://stimulus-scroll-to.stimulus-components.com/:splat"
+  status = 301
+  force = true
