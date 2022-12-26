@@ -1,18 +1,26 @@
-const path = require('path')
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 
-module.exports = {
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'stimulus-scroll-to'
-    },
-    rollupOptions: {
-      external: ['stimulus'],
-      output: {
-        globals: {
-          stimulus: 'Stimulus'
+export default defineConfig(({ mode }) => {
+  if (mode === 'netlify') {
+    return {}
+  }
+
+  return {
+    build: {
+      lib: {
+        entry: resolve(__dirname, 'src/index.ts'),
+        name: 'StimulusScrollTo',
+        fileName: 'stimulus-scroll-to'
+      },
+      rollupOptions: {
+        external: ['@hotwired/stimulus'],
+        output: {
+          globals: {
+            '@hotwired/stimulus': 'Stimulus'
+          }
         }
       }
     }
   }
-}
+})
