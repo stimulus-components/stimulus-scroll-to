@@ -4,7 +4,6 @@
 [![](https://img.shields.io/npm/v/stimulus-scroll-to.svg)](https://www.npmjs.com/package/stimulus-scroll-to)
 [![](https://github.com/stimulus-components/stimulus-scroll-to/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-scroll-to)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-scroll-to.svg)](https://github.com/stimulus-components/stimulus-scroll-to)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/26d5363d-d699-4558-abb4-2267919dbe59/deploy-status)](https://app.netlify.com/sites/stimulus-scroll-to/deploys)
 
 ## Getting started
 
@@ -12,7 +11,7 @@ A Stimulus controller to scroll to elements.
 
 ## 📚 Documentation
 
-See [stimulus-scroll-to documentation](https://stimulus-components.netlify.app/docs/components/stimulus-scroll-to/).
+See [stimulus-scroll-to documentation](https://www.stimulus-components.com/docs/stimulus-scroll-to/).
 
 ## 👷‍♂️ Contributing
 
