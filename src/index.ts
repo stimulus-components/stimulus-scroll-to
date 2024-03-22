@@ -1,39 +1,37 @@
-import { Controller } from '@hotwired/stimulus'
+import { Controller } from "@hotwired/stimulus"
 
 interface Option {
   offset?: number
   behavior?: string
 }
 
-export default class extends Controller {
-  // @ts-ignore
-  element: HTMLAnchorElement
+export default class extends Controller<HTMLAnchorElement> {
   offsetValue: number
   behaviorValue: string
   hasOffsetValue: boolean
 
   static values = {
     offset: Number,
-    behavior: String
+    behavior: String,
   }
 
-  initialize (): void {
+  initialize(): void {
     this.scroll = this.scroll.bind(this)
   }
 
-  connect (): void {
-    this.element.addEventListener('click', this.scroll)
+  connect(): void {
+    this.element.addEventListener("click", this.scroll)
   }
 
-  disconnect (): void {
-    this.element.removeEventListener('click', this.scroll)
+  disconnect(): void {
+    this.element.removeEventListener("click", this.scroll)
   }
 
-  scroll (event: Event): void {
+  scroll(event: Event): void {
     event.preventDefault()
 
-    const id: string = this.element.hash.replace(/^#/, '')
-    const target: HTMLElement = document.getElementById(id)
+    const id: string = this.element.hash.replace(/^#/, "")
+    const target = document.getElementById(id)
 
     if (!target) {
       console.warn(`[stimulus-scroll-to] The element with the id: "${id}" does not exist on the page.`)
@@ -43,13 +41,14 @@ export default class extends Controller {
     const elementPosition: number = target.getBoundingClientRect().top + window.pageYOffset
     const offsetPosition: number = elementPosition - this.offset
 
+    // eslint-disable-next-line no-undef
     window.scrollTo(<ScrollToOptions>{
       top: offsetPosition,
-      behavior: this.behavior
+      behavior: this.behavior,
     })
   }
 
-  get offset (): number {
+  get offset(): number {
     if (this.hasOffsetValue) {
       return this.offsetValue
     }
@@ -61,11 +60,11 @@ export default class extends Controller {
     return 10
   }
 
-  get behavior (): string {
-    return this.behaviorValue || this.defaultOptions.behavior || 'smooth'
+  get behavior(): string {
+    return this.behaviorValue || this.defaultOptions.behavior || "smooth"
   }
 
-  get defaultOptions (): Option {
+  get defaultOptions(): Option {
     return {}
   }
 }
