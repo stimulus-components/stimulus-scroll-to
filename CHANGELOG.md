@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] - 2024-03-22
+
+### Chore
+
+- Renaming the component from `stimulus-scroll-to` to `@stimulus-components/scroll-to`
+- Upgrading dependencies
+- Exporting Typescript Types
+- Updating demo UI
+- Add [Stimulus LSP](https://github.com/marcoroth/stimulus-lsp) compatibility
+
 ## [4.1.0] - 2022-12-25
 
 ### Added
