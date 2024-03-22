@@ -1,6 +1,6 @@
 {
   "name": "@stimulus-components/scroll-to",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "A Stimulus controller to scroll to elements.",
   "keywords": [
     "stimulus",
