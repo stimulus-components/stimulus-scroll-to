@@ -5,7 +5,7 @@ interface Option {
   behavior?: string
 }
 
-export default class extends Controller<HTMLAnchorElement> {
+export default class ScrollTo extends Controller<HTMLAnchorElement> {
   offsetValue: number
   behaviorValue: string
   hasOffsetValue: boolean
